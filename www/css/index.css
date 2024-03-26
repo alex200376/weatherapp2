@@ -1,0 +1,127 @@
+* {
+    /* apply box-sizing to all elements. This will make sure that padding and border are included in element's total width and height */
+    box-sizing: border-box;
+    
+    /* setting a default font color to all elements */
+    color: #000;
+  }
+  
+  /* container for chart */
+  #chartWrapper {
+    width: 100vw;
+    height: 50vh;   /* you can adjust this according to your needs */
+  }
+  
+  #chart {
+    width: 100%;
+    height: 100%;
+  }
+  /* Body styles */
+  body {
+    background-color: #ddd;
+    margin: 0;
+    padding: 0;
+    /* This font size is for mobile devices, you can add a media query for desktops */
+    font-size: 16px;
+  }/* Navbar styles */
+  #navbar {
+    background-color: #333;
+  }
+  
+  #navbar .logo {
+    color: #f2f2f2;
+    font-size: 20px;
+    line-height: 80px;
+    padding: 0 30px;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  #navbar ul {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  #navbar ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  
+  #navbar ul li button {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    transition: .5s;
+  }
+  
+  #navbar ul li button.active, 
+  #navbar ul li button:hover {
+    background: #1b9bff;
+    transition: .5s;
+  }
+  
+  #navbar .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  /* When the screen size is less than 952px, change the display properties */ 
+  @media (max-width: 952px) {
+    #navbar .logo {
+      font-size: 30px;
+      padding-left: 50px;
+    }
+  
+    #navbar ul li button {
+      font-size: 16px;
+    }
+  
+    #navbar .checkbtn {
+      display: block;
+    }
+  
+    #navbar ul {
+      height: 100vh;
+      width: 100%;
+      background: #333;
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+  
+    #navbar ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+  
+    #navbar ul li button {
+      font-size: 20px;
+    }
+  
+    /* Show menu when checked */ 
+    #navbar ul li button:hover,
+    #navbar ul li button.active {
+      background: none;
+      color: #fafdff;
+    }
+  
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
