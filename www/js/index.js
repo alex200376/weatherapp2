@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=22.2783&longitude=114.1747&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=Asia/Hong_Kong');
         const data = await response.json();
     // Remove time/date conversion and use indices as labels
-    const dates = data.daily.time.map(time => {
+        const dates = data.daily.time.map(time => {
         const date = new Date(time); 
         // Your API might be using a different date string format 
         let day = date.getDate();
@@ -70,7 +70,6 @@ var checkbox = document.querySelector('#check');
 
 buttons.forEach(function(button) {
   button.addEventListener('click', function() {
-
     checkbox.checked = false;
   });
 });

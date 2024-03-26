@@ -9,7 +9,8 @@
   /* container for chart */
   #chartWrapper {
     width: 100vw;
-    height: 50vh;   /* you can adjust this according to your needs */
+    height: 50vh; 
+    
   }
   
   #chart {
@@ -22,10 +23,11 @@
     margin: 0;
     padding: 0;
     /* This font size is for mobile devices, you can add a media query for desktops */
-    font-size: 16px;
+    font-size: 5vh;
   }/* Navbar styles */
   #navbar {
     background-color: #333;
+   
   }
   
   #navbar .logo {
@@ -45,6 +47,7 @@
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
+    font-size: 70%;
   }
   
   #navbar ul li button {
@@ -94,19 +97,19 @@
     }
   
     #navbar ul {
-      height: 100vh;
+      height: 100vh ;
       width: 100%;
       background: #333;
       position: fixed;
-      top: 80px;
       left: -100%;
       text-align: center;
       transition: all .5s;
+      margin-top: 0;
     }
   
     #navbar ul li {
       display: block;
-      margin: 50px 0;
+      margin: 40px 0;
       line-height: 30px;
     }
   
